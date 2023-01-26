@@ -1,0 +1,12 @@
+### Sign up route
+POST https://ticketing.dev/api/users/signup
+Content-Type: application/json
+
+{
+  "email": "test@email.com",
+  "password": "testpasswd"
+}
+
+### Not Found Error Test
+GET https://ticketing.dev/api/users/signup/ndwqindqiuwqwd
+Content-Type: application/json
