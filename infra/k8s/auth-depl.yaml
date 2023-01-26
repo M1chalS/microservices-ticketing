@@ -14,6 +14,12 @@ spec:
       containers:
         - name: auth
           image: m1chals/auth
+          env:
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  key: JWT_KEY
+                  name: jwt-secret
   replicas: 1
 ---
 apiVersion: v1
