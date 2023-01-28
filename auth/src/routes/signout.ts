@@ -1,4 +1,5 @@
 import express from "express";
+import {requireAuth} from "../middlewares/require-auth";
 
 const router = express.Router();
 
