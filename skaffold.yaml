@@ -26,3 +26,5 @@ build:
         manual:
           - src: "**/*.js"
             dest: .
+          - src: "**/*.jsx"
+            dest: .
