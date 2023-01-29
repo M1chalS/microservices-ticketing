@@ -18,6 +18,16 @@ build:
             dest: .
           - src: "*.http"
             dest: .
+    - image: m1chals/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
+          - src: "*.http"
+            dest: .
     - image: m1chals/client
       context: client
       docker:
