@@ -1,0 +1,23 @@
+### Create ticket
+POST https://ticketing.dev/api/tickets
+Content-Type: application/json
+
+{
+  "title": "ticket title",
+  "price": 10
+}
+
+### Update ticket
+PUT https://ticketing.dev/api/tickets/:id
+Content-Type: application/json
+
+{
+  "title": "new ticket title",
+  "price": 16
+}
+
+### Get Ticket
+GET https://ticketing.dev/api/tickets/:id
+
+### Get all tickets
+GET https://ticketing.dev/api/tickets
