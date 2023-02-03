@@ -38,6 +38,14 @@ build:
             dest: .
           - src: "*.http"
             dest: .
+    - image: m1chals/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
     - image: m1chals/client
       context: client
       docker:
