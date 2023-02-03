@@ -4,12 +4,14 @@ import {Order} from "../../models/order";
 import {Ticket} from "../../models/ticket";
 import {OrderStatus} from "@m1chals-ticketing/common";
 import {natsWrapper} from "../../nats-wrapper";
+import mongoose from "mongoose";
 
 it('doesnt change status when unauthorized', async () => {
     const userOne = global.signup();
     const userTwo = global.signup();
 
     const ticket = Ticket.build({
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: 'concert',
         price: 20
     });
@@ -33,6 +35,7 @@ it('changes order status to cancelled', async () => {
     const user = global.signup();
 
     const ticket = Ticket.build({
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: 'concert',
         price: 20
     });
@@ -58,6 +61,7 @@ it('emits an order cancelled event', async () => {
     const user = global.signup();
 
     const ticket = Ticket.build({
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: 'concert',
         price: 20
     });

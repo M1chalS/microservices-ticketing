@@ -1,9 +1,11 @@
 import request from "supertest";
 import {app} from "../../app";
 import {Ticket} from "../../models/ticket";
+import mongoose from "mongoose";
 
 it('returns an error if unauthorized to get this order', async () => {
     const ticket = Ticket.build({
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: 'concert',
         price: 20
     });
@@ -26,6 +28,7 @@ it('returns an error if unauthorized to get this order', async () => {
 
 it('fetches the order', async () => {
     const ticket = Ticket.build({
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: 'concert',
         price: 20
     });
