@@ -7,7 +7,7 @@ POST https://ticketing.dev/api/orders
 Content-Type: application/json
 
 {
-  "ticketId": "63ddb43caf25249d3d082263"
+  "ticketId": "id"
 }
 
 ### Get order
