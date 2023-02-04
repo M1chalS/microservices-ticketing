@@ -24,7 +24,7 @@ spec:
   selector:
     app: expiration-redis
   ports:
-    - port: 27017
-      targetPort: 27017
-      name: db
+    - name: db
       protocol: TCP
+      port: 6379
+      targetPort: 6379

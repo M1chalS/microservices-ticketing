@@ -1,0 +1,19 @@
+### Get all orders
+GET https://ticketing.dev/api/orders
+Content-Type: application/json
+
+### Create order
+POST https://ticketing.dev/api/orders
+Content-Type: application/json
+
+{
+  "ticketId": "63ddb43caf25249d3d082263"
+}
+
+### Get order
+GET https://ticketing.dev/api/orders/:orderId
+Content-Type: application/json
+
+### Cancel order
+DELETE https://ticketing.dev/api/orders/:orderId
+Content-Type: application/json
