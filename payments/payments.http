@@ -1,0 +1,9 @@
+POST https://ticketing.dev/api/payments
+Content-Type: application/json
+
+{
+    "token": "tok_visa",
+    "orderId": "id"
+}
+
+###
